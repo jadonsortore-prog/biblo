@@ -1,0 +1,3130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lone Star Plumbing | Dallas's #1 Trusted Plumber | 24/7 Emergency Service</title>
+  <meta name="description" content="Dallas's most trusted plumbing company. 24/7 emergency service, free estimates, licensed & insured plumbers. Drain cleaning, water heaters, pipe repair & more. Call (214) 555-0199.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lonestarplumbing.com/">
+  <meta property="og:title" content="Lone Star Plumbing | Dallas's #1 Trusted Plumber">
+  <meta property="og:description" content="24/7 emergency plumbing, free estimates, licensed & insured. Serving Dallas since 2009.">
+  <meta property="og:type" content="website">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ===== Custom Properties & Design Tokens ===== */
+:root {
+  --blue-900: #0c1a3a;
+  --blue-800: #122b5e;
+  --blue-700: #1e3a6e;
+  --blue-600: #2563eb;
+  --blue-500: #3b82f6;
+  --blue-400: #60a5fa;
+  --blue-300: #93c5fd;
+  --blue-200: #bfdbfe;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
+  --cyan-500: #06b6d4;
+  --cyan-400: #22d3ee;
+  --navy: #0a1628;
+  --gold: #f59e0b;
+  --gradient-hero: linear-gradient(135deg, var(--blue-900) 0%, #1a365d 50%, #1e40af 100%);
+  --gradient-card: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(6, 182, 212, 0.05) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--blue-600) 0%, var(--cyan-500) 100%);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 30px rgba(37, 99, 235, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ===== Global Resets ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: #f8fafc;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--blue-50); }
+::-webkit-scrollbar-thumb { background: var(--blue-400); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--blue-600); }
+
+/* ===== Navigation ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.75rem 0;
+  transition: var(--transition-base);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 22, 40, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.nav-logo .logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.3);
+  transition: var(--transition-bounce);
+}
+
+.nav-logo:hover .logo-icon {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 0.925rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--cyan-400);
+  border-radius: 99px;
+}
+
+.nav-cta {
+  background: var(--gradient-accent) !important;
+  color: white !important;
+  padding: 0.55rem 1.25rem !important;
+  border-radius: var(--radius-sm) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.3);
+  transition: var(--transition-bounce) !important;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Mobile hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2.5px;
+  background: white;
+  border-radius: 99px;
+  transition: var(--transition-base);
+}
+
+.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--gradient-hero);
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  filter: blur(2px);
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-particles .particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(96, 165, 250, 0.15);
+  animation: float-particle 20s infinite ease-in-out;
+}
+
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.3; }
+  25% { transform: translateY(-80px) translateX(40px) scale(1.1); opacity: 0.6; }
+  50% { transform: translateY(-40px) translateX(-30px) scale(0.9); opacity: 0.4; }
+  75% { transform: translateY(-100px) translateX(20px) scale(1.05); opacity: 0.5; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text h1 .highlight {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 540px;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 99px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.825rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.hero-badge svg {
+  width: 16px;
+  height: 16px;
+  color: var(--cyan-400);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl), 0 0 80px rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-image .floating-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-image .floating-card.card-1 {
+  top: 10%;
+  right: -30px;
+  animation-delay: 0s;
+}
+
+.hero-image .floating-card.card-2 {
+  bottom: 15%;
+  left: -30px;
+  animation-delay: 2s;
+}
+
+.floating-card .card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.floating-card .card-text strong {
+  display: block;
+  font-size: 0.825rem;
+  color: #1e293b;
+}
+
+.floating-card .card-text span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  font-family: inherit;
+  line-height: 1;
+}
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: white;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn-white {
+  background: white;
+  color: var(--blue-700);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-dark {
+  background: var(--navy);
+  color: white;
+}
+
+.btn-dark:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 6rem 1.5rem;
+}
+
+.section-dark {
+  background: var(--gradient-hero);
+  color: white;
+}
+
+.section-light {
+  background: white;
+}
+
+.section-alt {
+  background: var(--blue-50);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 4rem;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background: var(--gradient-card);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 99px;
+  color: var(--blue-600);
+  font-size: 0.825rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.section-badge-light {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--cyan-400);
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.section-dark .section-header p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--blue-600);
+  transition: var(--transition-bounce);
+}
+
+.card:hover .card-icon {
+  transform: scale(1.08) rotate(-3deg);
+  background: var(--gradient-accent);
+  color: white;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+
+/* ===== Service Cards Grid ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(8px);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* ===== Testimonials ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-bounce);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+
+.testimonial-stars svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gold);
+  fill: var(--gold);
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.925rem;
+}
+
+.testimonial-author strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.testimonial-author span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* ===== Contact Form ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.925rem;
+  color: #1e293b;
+  transition: var(--transition-base);
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.contact-info-card {
+  background: var(--gradient-hero);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-info-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+}
+
+.contact-info-items {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--cyan-400);
+}
+
+.contact-info-item h4 {
+  font-size: 0.925rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.contact-info-item p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-info-item a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.contact-info-item a:hover {
+  color: var(--cyan-400);
+}
+
+.map-container {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4rem 1.5rem 1.5rem;
+}
+
+.footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+  max-width: 300px;
+}
+
+.footer h4 {
+  color: white;
+  font-size: 0.925rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer ul a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: var(--transition-base);
+}
+
+.footer ul a:hover {
+  color: var(--cyan-400);
+  padding-left: 4px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  transition: var(--transition-bounce);
+}
+
+.footer-social a:hover {
+  background: var(--gradient-accent);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: var(--cyan-400);
+}
+
+/* ===== Page Header (inner pages) ===== */
+.page-header {
+  padding: 10rem 1.5rem 5rem;
+  background: var(--gradient-hero);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.page-header h1 {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 900;
+  color: white;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  position: relative;
+}
+
+.page-breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.page-breadcrumb a:hover {
+  color: var(--cyan-400);
+}
+
+.page-breadcrumb span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.page-breadcrumb .current {
+  color: var(--cyan-400);
+}
+
+/* ===== About Page ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-image .experience-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--gradient-accent);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.experience-badge .number {
+  font-size: 2rem;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+}
+
+.experience-badge .label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.about-content h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.about-content p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.value-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  color: var(--blue-600);
+}
+
+.value-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.value-item p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+  padding: 5rem 1.5rem;
+  background: var(--gradient-hero);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.05rem;
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===== Emergency Banner ===== */
+.emergency-banner {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  text-align: center;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+}
+
+.emergency-banner + .navbar {
+  top: 38px;
+}
+
+.emergency-banner a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* ===== Why Choose Us ===== */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ===== Process Steps ===== */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.process-grid::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--gradient-accent);
+  opacity: 0.2;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+}
+
+.process-number {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.process-step h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ===== Animations ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-up:nth-child(4) { transition-delay: 0.3s; }
+.fade-up:nth-child(5) { transition-delay: 0.4s; }
+.fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+/* ===== Counter Animation ===== */
+.counter {
+  display: inline-block;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 9rem;
+  }
+
+  .hero-text p { margin-left: auto; margin-right: auto; }
+  .hero-badges { justify-content: center; }
+  .hero-actions { justify-content: center; }
+  .hero-image { max-width: 500px; margin: 0 auto; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid::before { display: none; }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    gap: 0.5rem;
+    transition: var(--transition-base);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .section { padding: 4rem 1.5rem; }
+  .section-header { margin-bottom: 2.5rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+  .process-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+  
+  .hero-image .floating-card {
+    display: none;
+  }
+
+  .page-header {
+    padding: 8rem 1.5rem 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .btn { width: 100%; justify-content: center; }
+  .cta-actions { flex-direction: column; align-items: center; }
+}
+
+/* ===== Form Success State ===== */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 3rem;
+}
+
+.form-success.show {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.form-success .success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.form-success h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.form-success p {
+  color: #64748b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== Loading Shimmer ===== */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ===== Review Page Stars ===== */
+.overall-rating {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.overall-rating .big-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--blue-800);
+  line-height: 1;
+}
+
+.overall-rating .total {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.big-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 0.5rem;
+}
+
+.big-stars svg {
+  width: 28px;
+  height: 28px;
+  color: var(--gold);
+  fill: var(--gold);
+}
+
+/* ===== Service Detail Accordion ===== */
+.service-detail {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.service-detail:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.service-detail-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: white;
+  transition: var(--transition-base);
+}
+
+.service-detail-header:hover {
+  background: var(--blue-50);
+}
+
+.service-detail-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.service-detail-header .chevron {
+  transition: var(--transition-base);
+}
+
+.service-detail.open .chevron {
+  transform: rotate(180deg);
+}
+
+.service-detail-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.service-detail.open .service-detail-body {
+  max-height: 500px;
+}
+
+.service-detail-body-inner {
+  padding: 0 1.5rem 1.25rem;
+  color: #64748b;
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+
+.service-detail-body-inner ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.service-detail-body-inner li {
+  margin-bottom: 0.35rem;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    🚨 24/7 Emergency Service Available —
+    <a href="tel:2145550199">Call Now: (214) 555-0199</a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">🔧</div>
+        Lone Star Plumbing
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+<div id="home">
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-image" style="background-image: url('img/hero.png');"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Dallas's Most Trusted<br><span class="highlight">Plumbing Experts</span></h1>
+        <p>From emergency repairs to full bathroom remodels, our licensed plumbers deliver reliable, high-quality service backed by a 100% satisfaction guarantee. Serving Dallas and surrounding communities since 2009.</p>
+        <div class="hero-badges">
+          <span class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed &amp; Insured
+          </span>
+          <span class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            24/7 Emergency
+          </span>
+          <span class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Free Estimates
+          </span>
+        </div>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">
+            Get Free Estimate
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="services.html" class="btn btn-outline">
+            Our Services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="img/hero.png" alt="Beautiful blue-tiled bathroom showcasing Lone Star Plumbing craftsmanship">
+        <div class="floating-card card-1">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(6,182,212,0.08)); margin-bottom:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
+          </div>
+          <div class="card-text">
+            <strong>500+ Happy Customers</strong>
+            <span>This year alone</span>
+          </div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.06)); margin-bottom:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="card-text">
+            <strong>4.9★ Google Rating</strong>
+            <span>Verified reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="section section-dark" style="padding: 4rem 1.5rem;">
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="15" data-suffix="+">0</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="5000" data-suffix="+">0</span></div>
+          <div class="stat-label">Jobs Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="4" data-suffix=".9★">0</span></div>
+          <div class="stat-label">Star Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Availability</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          What We Do
+        </span>
+        <h2>Our Professional Services</h2>
+        <p>Comprehensive plumbing solutions for homes and businesses across Dallas. Every job backed by our satisfaction guarantee.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M6 8h12"/><path d="M6 8c0 4-2 6-2 10a4 4 0 0 0 8 0"/><path d="M18 8c0 4 2 6 2 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3>Drain Cleaning</h3>
+          <p>Hydro jetting, snaking, and camera inspections to clear any blockage fast and prevent future clogs.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg>
+          </div>
+          <h3>Water Heater Repair</h3>
+          <p>Installation, repair, and tankless upgrades. Keep your hot water flowing with our expert technicians.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Pipe Repair & Replacement</h3>
+          <p>Advanced leak detection and repiping with copper, PEX, or PVC. Trenchless repair options available.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+          </div>
+          <h3>Sewer Line Services</h3>
+          <p>Complete sewer line repair, replacement, and cleaning using modern trenchless technology.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Bathroom Remodeling</h3>
+          <p>Full renovation plumbing from rough-in to fixtures. Transform your bathroom with expert craftsmanship.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(220,38,38,0.05)); color: #dc2626;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Emergency Plumbing</h3>
+          <p>24/7 rapid response for burst pipes, flooding, and gas leaks. Usually on-site within 60 minutes.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="services.html" class="btn btn-dark">
+          View All Services
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Why Us
+        </span>
+        <h2>Why Dallas Trusts Lone Star</h2>
+        <p>We're not just plumbers — we're your neighbors, committed to protecting your home and your wallet.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Licensed &amp; Certified Experts</h3>
+          <p>Every plumber on our team is a licensed master or journeyman plumber, fully insured and continuously trained on the latest codes.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Transparent Pricing</h3>
+          <p>You'll receive a detailed, written estimate before any work begins. No surprises, no hidden fees — just honest pricing.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Same-Day Service</h3>
+          <p>Most non-emergency appointments can be scheduled for the same day. Emergency calls get priority with 60-minute arrival.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Satisfaction Guaranteed</h3>
+          <p>All our work is backed by a comprehensive warranty. If you're not 100% satisfied, we'll make it right — guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          How It Works
+        </span>
+        <h2>Simple 4-Step Process</h2>
+        <p>Getting your plumbing fixed has never been easier. Here's how we work.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step fade-up">
+          <div class="process-number">1</div>
+          <h4>Call or Book Online</h4>
+          <p>Reach us by phone or fill out our online form. We'll respond within minutes.</p>
+        </div>
+        <div class="process-step fade-up">
+          <div class="process-number">2</div>
+          <h4>Free Consultation</h4>
+          <p>A licensed plumber will assess your issue and provide a detailed, upfront estimate.</p>
+        </div>
+        <div class="process-step fade-up">
+          <div class="process-number">3</div>
+          <h4>Expert Service</h4>
+          <p>Our team completes the work efficiently, cleanly, and to the highest standards.</p>
+        </div>
+        <div class="process-step fade-up">
+          <div class="process-number">4</div>
+          <h4>100% Satisfaction</h4>
+          <p>We walk through the finished work with you and ensure everything is perfect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Testimonials
+        </span>
+        <h2>What Our Customers Say</h2>
+        <p>Don't just take our word for it — hear from real Dallas homeowners we've helped.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"A pipe burst at 2 AM and Lone Star had someone at our door within 45 minutes. They fixed everything quickly and even helped with the water cleanup. Absolute lifesavers!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span>Highland Park</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Got three quotes for a water heater replacement. Lone Star was the most thorough and reasonably priced. The tech even explained how to maintain it. Highly recommend."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DK</div>
+            <div>
+              <strong>David K.</strong>
+              <span>Lakewood</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"We've used Lone Star for both drain cleaning and a complete kitchen remodel. Consistently professional, clean, and on time. They're the only plumber we call now."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MG</div>
+            <div>
+              <strong>Maria G.</strong>
+              <span>Oak Cliff</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="reviews.html" class="btn btn-dark">
+          Read All Reviews
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Ready to Fix Your Plumbing?</h2>
+      <p>Get a free, no-obligation estimate today. Our friendly team is standing by to help with any plumbing issue — big or small.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">
+          Get Free Estimate
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2145550199" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (214) 555-0199
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+</div>
+<div id="about">
+
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span class="current">About Us</span>
+    </div>
+    <h1>About Lone Star Plumbing</h1>
+    <p>Family-owned and proudly serving the Dallas community with expert plumbing services for over 15 years.</p>
+  </header>
+
+  <!-- About Story -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-up">
+          <img src="img/team.png" alt="The Lone Star Plumbing team standing in front of their service van in Dallas">
+          <div class="experience-badge">
+            <span class="number">15+</span>
+            <span class="label">Years of Excellence</span>
+          </div>
+        </div>
+        <div class="about-content fade-up">
+          <span class="section-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Our Story
+          </span>
+          <h2>Serving Dallas with Excellence Since 2009</h2>
+          <p>Lone Star Plumbing was founded by Master Plumber James Mitchell with a simple mission: deliver honest, high-quality plumbing services that Dallas families can trust. What started as a one-man operation has grown into a team of over 50 dedicated professionals.</p>
+          <p>As a family-owned business, we understand the importance of treating every customer's home like our own. We've built our reputation one job at a time — through transparent pricing, exceptional craftsmanship, and a genuine commitment to our community.</p>
+          <p>Today, we're proud to be one of Dallas's highest-rated plumbing companies, with thousands of five-star reviews from homeowners across the metroplex.</p>
+          
+          <div class="values-grid" style="margin-top: 2rem;">
+            <div class="value-item">
+              <div class="value-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4>Quality Craftsmanship</h4>
+                <p>Every job done right the first time, guaranteed.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div>
+                <h4>Customer First</h4>
+                <p>Your satisfaction drives every decision we make.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <h4>Fair &amp; Honest Pricing</h4>
+                <p>Upfront quotes with no hidden fees, ever.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h4>Community Focused</h4>
+                <p>Proud to give back to the Dallas community.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Sets Us Apart -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Our Edge
+        </span>
+        <h2>What Sets Us Apart</h2>
+        <p>We invest in our people, our tools, and our community to deliver the best plumbing experience possible.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Master Licensed Plumbers</h3>
+          <p>Our team includes master and journeyman licensed plumbers with extensive experience in residential and commercial systems. Every technician carries proper licensing and insurance.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Latest Technology &amp; Equipment</h3>
+          <p>We use cutting-edge tools including video camera inspections, electronic leak detection, hydro jetting systems, and trenchless pipe repair technology to solve problems faster.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3>Eco-Friendly Solutions</h3>
+          <p>We recommend and install water-efficient fixtures, tankless water heaters, and environmentally responsible solutions that save water and reduce your utility bills.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Ongoing Training &amp; Certification</h3>
+          <p>Our plumbers receive continuous education on the latest plumbing codes, techniques, and technologies. We stay current so your home gets the best service possible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section section-dark" style="padding: 4rem 1.5rem;">
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="15" data-suffix="+">0</span></div>
+          <div class="stat-label">Years in Business</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="5000" data-suffix="+">0</span></div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="50" data-suffix="+">0</span></div>
+          <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span data-count="99" data-suffix="%">0</span></div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coverage Area
+        </span>
+        <h2>Serving the Greater Dallas Area</h2>
+        <p>From downtown Dallas to the surrounding suburbs, our team of plumbers is ready to serve you wherever you are in the metroplex.</p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; max-width: 800px; margin: 0 auto;">
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Dallas
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Fort Worth
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Plano
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Frisco
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          McKinney
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Richardson
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Garland
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Irving
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Arlington
+        </span>
+        <span class="hero-badge" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.12); color: #1e3a5f; font-size: 0.9rem; padding: 0.5rem 1.15rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mesquite
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Ready to Work With Dallas's Best?</h2>
+      <p>Contact us today for a free estimate. We're ready to solve your plumbing problems with expert care and guaranteed satisfaction.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">
+          Get Free Estimate
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2145550199" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (214) 555-0199
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+</div>
+<div id="services">
+
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span class="current">Services</span>
+    </div>
+    <h1>Our Professional Services</h1>
+    <p>From routine maintenance to emergency repairs, our licensed plumbers deliver expert solutions for every plumbing need in the Dallas area.</p>
+  </header>
+
+  <!-- Services Grid -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          What We Offer
+        </span>
+        <h2>Comprehensive Plumbing Solutions</h2>
+        <p>We provide a full range of residential and commercial plumbing services backed by our satisfaction guarantee.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Drain Cleaning -->
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M6 8h12"/><path d="M6 8c0 4-2 6-2 10a4 4 0 0 0 8 0"/><path d="M18 8c0 4 2 6 2 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3>Drain Cleaning & Unclogging</h3>
+          <p>Professional drain cleaning using hydro jetting, motorized snakes, and video camera inspections to clear even the toughest blockages.</p>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Water Heater -->
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg>
+          </div>
+          <h3>Water Heater Services</h3>
+          <p>Expert installation, repair, and maintenance for traditional tank and tankless water heaters. Energy-efficient upgrades available.</p>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Pipe Repair -->
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Pipe Repair & Replacement</h3>
+          <p>Advanced leak detection and repair services. Full repiping with copper, PEX, or PVC. Trenchless pipe repair options.</p>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Toilet & Fixture -->
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10H3"/><path d="M21 6H3"/><path d="M21 14H3"/><path d="M17 18H3"/></svg>
+          </div>
+          <h3>Toilet & Fixture Repair</h3>
+          <p>Professional installation and repair of toilets, faucets, sinks, showerheads, and garbage disposals. Upgrade to modern fixtures.</p>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Bathroom & Kitchen Remodeling -->
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Bathroom & Kitchen Remodeling</h3>
+          <p>Complete plumbing services for your renovation project. We handle rough-in, fixture installation, and finish work.</p>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Sewer Line -->
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+          </div>
+          <h3>Sewer Line Services</h3>
+          <p>Sewer line repair, replacement, and cleaning. Trenchless sewer technology minimizes disruption to your property.</p>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Leak Detection -->
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3>Leak Detection & Repair</h3>
+          <p>State-of-the-art electronic and acoustic leak detection. Slab leak repair, hidden leak location, and water damage prevention.</p>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Emergency Plumbing -->
+        <div class="card fade-up">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.05)); color: #dc2626;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Emergency Plumbing</h3>
+          <p>24/7 emergency response for burst pipes, flooding, sewage backups, and gas leaks. Fast arrival times across Dallas.</p>
+          <a href="tel:2145550199" class="btn btn-primary" style="margin-top:1rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
+            Call Now: (214) 555-0199
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Details Accordion -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          Learn More
+        </span>
+        <h2>Detailed Service Information</h2>
+        <p>Click on any service below to learn more about what's included and how we can help.</p>
+      </div>
+
+      <!-- Accordion Items -->
+      <div style="max-width: 800px; margin: 0 auto;">
+
+        <div class="service-detail open">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M6 8h12"/><path d="M6 8c0 4-2 6-2 10a4 4 0 0 0 8 0"/><path d="M18 8c0 4 2 6 2 10a4 4 0 0 1-8 0"/></svg>
+              Drain Cleaning & Unclogging
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>Our drain cleaning services restore flow quickly and effectively using industry-leading techniques:</p>
+              <ul>
+                <li>High-pressure hydro jetting to blast away grease, scale, and debris</li>
+                <li>Motorized drain snaking for stubborn clogs</li>
+                <li>Video camera inspection to pinpoint the exact location and cause</li>
+                <li>Root intrusion removal and prevention</li>
+                <li>Kitchen, bathroom, floor, and main line drain cleaning</li>
+                <li>Preventive maintenance plans to avoid future blockages</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg>
+              Water Heater Services
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>Complete water heater solutions for consistent hot water and energy savings:</p>
+              <ul>
+                <li>Traditional tank water heater installation (40, 50, 75 gallon)</li>
+                <li>Tankless water heater installation and conversion</li>
+                <li>Thermostat and element replacement</li>
+                <li>Anode rod replacement to extend tank life</li>
+                <li>Expansion tank installation</li>
+                <li>Energy-efficient upgrade consultations</li>
+                <li>Annual maintenance and flushing services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              Pipe Repair & Replacement
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>Expert pipe repair and full repiping services for your home:</p>
+              <ul>
+                <li>Electronic and acoustic leak detection</li>
+                <li>Copper, PEX, and CPVC pipe installation</li>
+                <li>Whole-house repiping for older galvanized systems</li>
+                <li>Slab leak repair and rerouting</li>
+                <li>Burst pipe emergency repair</li>
+                <li>Frozen pipe thawing and insulation</li>
+                <li>Gas line repair and installation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10H3"/><path d="M21 6H3"/><path d="M21 14H3"/><path d="M17 18H3"/></svg>
+              Toilet & Fixture Repair
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>Professional fixture services for every room in your home:</p>
+              <ul>
+                <li>Toilet installation, repair, and replacement</li>
+                <li>Faucet installation and repair (kitchen & bath)</li>
+                <li>Sink installation and drain repair</li>
+                <li>Showerhead and bathtub fixture upgrades</li>
+                <li>Garbage disposal installation and repair</li>
+                <li>Water-saving fixture upgrades</li>
+                <li>Outdoor hose bib and spigot repair</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Bathroom & Kitchen Remodeling
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>Full plumbing services for your remodeling project from planning to completion:</p>
+              <ul>
+                <li>Pre-construction plumbing design and consultation</li>
+                <li>Rough-in plumbing for new layouts</li>
+                <li>Fixture selection guidance and installation</li>
+                <li>Shower and tub installation including tile-ready pans</li>
+                <li>Kitchen sink and dishwasher plumbing</li>
+                <li>Water line relocation and extension</li>
+                <li>Coordination with general contractors and inspectors</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+              Sewer Line Services
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>Comprehensive sewer line solutions using the latest technology:</p>
+              <ul>
+                <li>Video camera sewer line inspection</li>
+                <li>Trenchless sewer repair (pipe bursting & pipe lining)</li>
+                <li>Traditional sewer line replacement</li>
+                <li>Sewer line cleaning and root removal</li>
+                <li>Sewer line locate services</li>
+                <li>Backflow prevention device installation</li>
+                <li>Septic system connections</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              Leak Detection & Repair
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>Pinpoint and fix leaks before they cause costly damage:</p>
+              <ul>
+                <li>Electronic leak detection equipment</li>
+                <li>Acoustic listening devices for hidden leaks</li>
+                <li>Thermal imaging for behind-wall leaks</li>
+                <li>Slab leak detection and repair</li>
+                <li>Water meter leak testing</li>
+                <li>Pool and spa leak detection</li>
+                <li>Water damage mitigation guidance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-detail">
+          <div class="service-detail-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Emergency Plumbing — 24/7
+            </h3>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="service-detail-body">
+            <div class="service-detail-body-inner">
+              <p>When disaster strikes, our emergency team is ready 24 hours a day, 7 days a week:</p>
+              <ul>
+                <li>Burst and broken pipe repair</li>
+                <li>Sewage backup cleanup and repair</li>
+                <li>Flooding and water extraction support</li>
+                <li>Gas leak detection and repair</li>
+                <li>Overflowing toilets and fixtures</li>
+                <li>No-hot-water emergencies</li>
+                <li>Typical response time: under 60 minutes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Our Services -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Our Promise
+        </span>
+        <h2>Why Choose Our Services</h2>
+        <p>We go above and beyond to deliver an exceptional plumbing experience every single time.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v4"/><path d="M12 19v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>Upfront Pricing</h3>
+          <p>No hidden fees, no surprises. We provide detailed written estimates before any work begins so you know exactly what to expect.</p>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Warranty Included</h3>
+          <p>All our work is backed by a comprehensive warranty. If something isn't right, we'll come back and fix it — no questions asked.</p>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
+          </div>
+          <h3>Background-Checked Technicians</h3>
+          <p>Every technician is thoroughly vetted, drug-tested, and background-checked for your safety and peace of mind.</p>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Fast Response Time</h3>
+          <p>We typically arrive within 60 minutes for emergency calls. Same-day service available for most standard appointments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Image Banner -->
+  <section class="section section-dark" style="padding: 4rem 1.5rem;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+      <div>
+        <img src="img/services.png" alt="Professional plumber at work" style="width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);">
+      </div>
+      <div>
+        <span class="section-badge section-badge-light">Our Approach</span>
+        <h2 style="color: white; font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem;">Expert Care for Your Home</h2>
+        <p style="color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">Our licensed plumbers bring years of hands-on experience and the latest tools to every job. We treat your home like our own — wearing shoe covers, laying down drop cloths, and leaving your space cleaner than we found it.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+          <a href="contact.html" class="btn btn-primary">
+            Schedule Service
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="tel:2145550199" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (214) 555-0199
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Need a Plumbing Service?</h2>
+      <p>Contact us today for a free estimate. We're ready to solve your plumbing problems with expert care and guaranteed satisfaction.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">
+          Get Free Estimate
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2145550199" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (214) 555-0199
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+</div>
+<div id="reviews">
+
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span class="current">Reviews</span>
+    </div>
+    <h1>What Our Customers Say</h1>
+    <p>Over 500 five-star reviews from Dallas homeowners who trust Lone Star Plumbing for all their plumbing needs.</p>
+  </header>
+
+  <!-- Overall Rating -->
+  <section class="section section-light" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="overall-rating fade-up">
+        <div class="big-number">4.9</div>
+        <div class="big-stars">
+          <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="total" style="font-size: 1.05rem; color: #64748b; margin-top: 0.5rem;">Based on 500+ Verified Reviews</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Grid -->
+  <section class="section section-alt" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="testimonials-grid">
+
+        <!-- Review 1 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"A pipe burst at 2 AM and I panicked. Called Lone Star and they had someone at my door within 45 minutes. The technician was professional, kind, and fixed everything quickly. They even helped with the water cleanup. Absolute lifesavers — I can't recommend them enough!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span>Highland Park</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Got three quotes for a water heater replacement. Lone Star was the most thorough in their inspection and the most reasonably priced. The tech even took time to explain how to maintain the new unit. Will definitely use them again."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DK</div>
+            <div>
+              <strong>David K.</strong>
+              <span>Lakewood</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Very professional from start to finish. They cleaned the main drain line and showed me the camera footage of what was causing the backup. No pressure, no upselling — just honest service. My go-to plumber from now on."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MG</div>
+            <div>
+              <strong>Maria G.</strong>
+              <span>Oak Cliff</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"We hired Lone Star for the plumbing in our master bathroom remodel. They were on time every day, communicated clearly about what was happening, and the finished work is flawless. The shower pressure is amazing!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RT</div>
+            <div>
+              <strong>Robert T.</strong>
+              <span>Uptown</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Had a major sewer line issue that two other companies couldn't diagnose properly. Lone Star brought out a camera, found the root intrusion, and used trenchless repair to fix it without tearing up my yard. Worth every penny."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JL</div>
+            <div>
+              <strong>Jennifer L.</strong>
+              <span>Preston Hollow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Needed a new kitchen sink and garbage disposal installed during our renovation. The plumber was neat, efficient, and even gave me tips on how to keep the disposal running smoothly. Great experience all around."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MB</div>
+            <div>
+              <strong>Michael B.</strong>
+              <span>Deep Ellum</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 7 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Best decision we made was switching to a tankless water heater. Lone Star walked us through the options, installed it in one day, and our energy bill dropped noticeably. The endless hot water is a game changer for our family of five."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AW</div>
+            <div>
+              <strong>Amanda W.</strong>
+              <span>Lake Highlands</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 8 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Called at 11 PM on a Saturday because water was coming up through our shower drain. They answered immediately, arrived in under an hour, and resolved the issue. No crazy after-hours surcharge either. These guys are the real deal."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CR</div>
+            <div>
+              <strong>Carlos R.</strong>
+              <span>Bishop Arts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 9 -->
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"We've been using Lone Star for annual plumbing maintenance for three years now. They always find small issues before they become big problems. Consistent, reliable, and trustworthy. Can't imagine using anyone else."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LH</div>
+            <div>
+              <strong>Lisa H.</strong>
+              <span>University Park</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Experience the Lone Star Difference</h2>
+      <p>Join hundreds of happy Dallas homeowners. Get a free estimate today and see why we're the area's top-rated plumbing company.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">
+          Get Free Estimate
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2145550199" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (214) 555-0199
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+</div>
+<div id="contact">
+
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span class="current">Contact</span>
+    </div>
+    <h1>Get In Touch</h1>
+    <p>We'd love to hear from you. Reach out for a free estimate or emergency service — our team is standing by.</p>
+  </header>
+
+  <!-- Contact Form + Info -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form Side -->
+        <div>
+          <div class="card fade-up" style="padding: 2.5rem;">
+            <h2 style="font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.35rem;">Request a Free Estimate</h2>
+            <p style="color: #64748b; font-size: 0.925rem; margin-bottom: 2rem;">Fill out the form below and we'll get back to you within 1 business hour.</p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="John Smith" required>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(214) 555-1234" required>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label for="service">Service Needed</label>
+                  <select id="service" name="service">
+                    <option value="">Select a Service</option>
+                    <option value="drain-cleaning">Drain Cleaning</option>
+                    <option value="water-heater">Water Heater</option>
+                    <option value="pipe-repair">Pipe Repair</option>
+                    <option value="sewer-line">Sewer Line</option>
+                    <option value="bathroom-remodel">Bathroom Remodel</option>
+                    <option value="emergency">Emergency Service</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="date">Preferred Date</label>
+                  <input type="date" id="date" name="date">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your plumbing issue or project..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                Send Request
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success">
+              <div class="success-icon">✓</div>
+              <h3>Thank You!</h3>
+              <p>We've received your request and will get back to you within 1 business hour. For immediate assistance, call us at <a href="tel:2145550199" style="color: var(--blue-600); font-weight: 600;">(214) 555-0199</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Side -->
+        <div class="fade-up">
+          <div class="contact-info-card" style="margin-bottom: 1.5rem;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 2rem; position: relative; z-index: 1;">Contact Information</h3>
+            <div class="contact-info-items">
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <p><a href="tel:2145550199">(214) 555-0199</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:info@lonestarplumbing.com">info@lonestarplumbing.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4>Address</h4>
+                  <p>4521 Maple Avenue<br>Dallas, TX 75219</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <h4>Business Hours</h4>
+                  <p>Mon–Fri: 7:00 AM – 7:00 PM<br>Saturday: 8:00 AM – 5:00 PM<br>Sunday: Emergency Only</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="#" style="flex:1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem; background: white; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: #1e293b; font-weight: 600; font-size: 0.85rem; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877f2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="#" style="flex:1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem; background: white; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: #1e293b; font-weight: 600; font-size: 0.85rem; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#4285f4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              Google
+            </a>
+            <a href="#" style="flex:1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem; background: white; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.06); text-decoration: none; color: #1e293b; font-weight: 600; font-size: 0.85rem; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#d62976"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Our Location
+        </span>
+        <h2>Find Us in Dallas</h2>
+        <p>Conveniently located on Maple Avenue, we serve the entire Dallas-Fort Worth metroplex.</p>
+      </div>
+      <div class="map-container fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214587.72742362498!2d-96.87196653453119!3d32.82058358843206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647571f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lone Star Plumbing location in Dallas, TX"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency CTA -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🚨</div>
+      <h2>Plumbing Emergency?</h2>
+      <p>Don't wait — our emergency team is available 24 hours a day, 7 days a week. One call and we're on our way.</p>
+      <div class="cta-actions">
+        <a href="tel:2145550199" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (214) 555-0199
+        </a>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.5);">Available 24/7 • Average response time: under 60 minutes</p>
+    </div>
+  </section>
+
+  
+</div>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" style="margin-bottom: 0.5rem;">
+          <div class="logo-icon">🔧</div>
+          Lone Star Plumbing
+        </a>
+        <p>Dallas's most trusted plumbing company. Licensed, insured, and committed to delivering exceptional service since 2009.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Google Business">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          </a>
+          <a href="#" aria-label="Yelp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.905-4.308a1.072 1.072 0 011.596-.206 7.285 7.285 0 012.056 3.358c.197.747-.386 1.353-1.386 1.353zM13.254 14.662l4.705 2.244c.863.413.477 1.5-.384 1.72a7.24 7.24 0 01-3.926-.16c-.728-.218-.94-1.2-.395-1.804zM11.21 13.063c.24.924-.602 1.632-1.35 1.137L5.672 11.4a1.068 1.068 0 01-.157-1.612 7.281 7.281 0 013.14-2.16c.724-.252 1.419.36 1.419 1.126z"/><path d="M10.95 3.024v5.15c0 .98-1.158 1.438-1.79.71L5.98 5.308a1.072 1.072 0 01.215-1.596A7.273 7.273 0 0110.15 2.02c.467-.01.8.384.8.855v.15z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heaters</a></li>
+          <li><a href="#services">Pipe Repair</a></li>
+          <li><a href="#services">Sewer Lines</a></li>
+          <li><a href="#services">Emergency Plumbing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:2145550199">(214) 555-0199</a></li>
+          <li><a href="mailto:info@lonestarplumbing.com">info@lonestarplumbing.com</a></li>
+          <li>4521 Maple Avenue</li>
+          <li>Dallas, TX 75219</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Lone Star Plumbing. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="#">Terms of Service</a> &nbsp;|&nbsp;
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+// ===== Navigation Scroll Effect =====
+const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// ===== Mobile Nav Toggle =====
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  });
+
+  // Close mobile nav on link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+// ===== Intersection Observer for Animations =====
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ===== Counter Animation =====
+function animateCounters() {
+  const counters = document.querySelectorAll('[data-count]');
+  
+  counters.forEach(counter => {
+    const target = parseInt(counter.dataset.count);
+    const suffix = counter.dataset.suffix || '';
+    const duration = 2000;
+    const start = 0;
+    const startTime = performance.now();
+    
+    function updateCounter(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(start + (target - start) * easeOut);
+      
+      counter.textContent = current.toLocaleString() + suffix;
+      
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      }
+    }
+    
+    requestAnimationFrame(updateCounter);
+  });
+}
+
+// Trigger counters when stats section is visible
+const statsSection = document.querySelector('.stats-bar');
+if (statsSection) {
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  statsObserver.observe(statsSection);
+}
+
+// ===== Contact Form Handling =====
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `
+      <svg class="animate-spin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+      </svg>
+      Sending...
+    `;
+    btn.disabled = true;
+    
+    // Simulate form submission
+    setTimeout(() => {
+      contactForm.style.display = 'none';
+      document.querySelector('.form-success').classList.add('show');
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }, 1500);
+  });
+}
+
+// ===== Service Accordion =====
+document.querySelectorAll('.service-detail-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const detail = header.parentElement;
+    const isOpen = detail.classList.contains('open');
+    
+    // Close all others
+    document.querySelectorAll('.service-detail').forEach(d => d.classList.remove('open'));
+    
+    // Toggle current
+    if (!isOpen) {
+      detail.classList.add('open');
+    }
+  });
+});
+
+// ===== Smooth scroll for anchor links =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ===== Active nav link highlight =====
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    link.classList.add('active');
+  }
+});
+
+// ===== Hero particles (only on homepage) =====
+const particlesContainer = document.querySelector('.hero-particles');
+if (particlesContainer) {
+  for (let i = 0; i < 12; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    const size = Math.random() * 80 + 20;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 20 + 's';
+    particle.style.animationDuration = (Math.random() * 15 + 15) + 's';
+    particlesContainer.appendChild(particle);
+  }
+}
+  </script>
+</body>
+</html>
